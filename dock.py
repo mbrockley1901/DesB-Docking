@@ -9,9 +9,9 @@ substrates = ["1_3_diaminopentane", "1_3_diaminopropane", "n_butylamine",
 #docking each substrate with DesB
 for ligand in substrates:
 	
-	logfile = "log_" + ligand + ".txt"
-	output = "vina_" + ligand + ".pdbqt"
-	command = "C:\Program Files (x86)\The Scripps Research Institute\Vina\'vina" + " --receptor " + enzyme + "--ligand " + ligand + ".pdbqt" " --config conf.txt --out " + output + " --log " + logfile
+	logfile = "logs/log_" + ligand + ".txt"
+	output = "results/vina_" + ligand + ".pdbqt"
+	command = "C:\Program Files (x86)\The Scripps Research Institute\Vina\'vina" + " --receptor " + enzyme + "--ligand " + "ligands/" + ligand + ".pdbqt" " --config conf.txt --out " + output + " --log " + logfile
 	"""concatenates strings for execution"""
 	
 	#this command changes based on the location of vina and the Os of the system
